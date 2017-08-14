@@ -1,0 +1,7 @@
+<h1>{{projectName}}</h1>
+<ul *ngFor="let currentRecipe of recipes">
+  <li>{{currentRecipe.title}}</li>
+  <ul>
+    <li *ngFor="let currentIngredient of currentRecipe.ingredients">{{currentIngredient}}</li>
+  </ul>
+</ul>
