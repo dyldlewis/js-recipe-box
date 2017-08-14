@@ -1,7 +1,14 @@
-<h1>{{projectName}}</h1>
-<ul *ngFor="let currentRecipe of recipes">
-  <li>{{currentRecipe.title}}</li>
-  <ul>
-    <li *ngFor="let currentIngredient of currentRecipe.ingredients">{{currentIngredient}}</li>
+<div class="container">
+  <h1>{{projectName}}</h1>
+  <ul class="list-unstyled" *ngFor="let currentRecipe of recipes">
+    <li><h2>{{currentRecipe.title}}</h2></li>
+    <h3>{{ingredients}}</h3>
+    <ul *ngFor="let currentIngredient of currentRecipe.ingredients">
+      <li>{{currentIngredient}}</li>
+    </ul>
+    <h3>{{instructions}}</h3>
+    <ul *ngFor="let currentInstruction of currentRecipe.instructions">
+      <li>{{currentInstruction}}</li>
+    </ul>
   </ul>
-</ul>
+</div>
